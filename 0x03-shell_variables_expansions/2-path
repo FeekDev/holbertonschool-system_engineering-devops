@@ -1,2 +1,2 @@
 #!/bin/bash
-echo PAT="$OLDPWD:/action"
+export PAT="$OLDPWD:/action"
