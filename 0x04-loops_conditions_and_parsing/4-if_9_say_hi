@@ -10,6 +10,7 @@ do
     ((number += 1))
 if [ "$number" -eq 9 ]
     then
+        echo "$default"
         echo "$special"
         continue
         fi
