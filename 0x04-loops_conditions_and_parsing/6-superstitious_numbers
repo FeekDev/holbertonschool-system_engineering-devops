@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+#This script print 10 times "Best school" position 9 "Hi"
+display_4="bad luck from China"
+display_9="bad luck from Japan"
+display_17="bad luck from Italy"
+number=0
+Limit=20
+while [ "$number" -lt "$Limit" ]
+do
+    ((number += 1))
+    echo "$number"
+case $number in
+    4)
+        echo "$display_4"
+    ;;
+    9)
+        echo "$display_9"
+    ;;
+    17)
+        echo "$display_17"
+esac
+done
