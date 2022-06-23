@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#This script print 10 times "Best school" position 9 "Hi"
+default='Best School'
+special='Hi'
+number=1
+Limit=10
+while [ "$number" -lt "$Limit" ]
+do
+    echo "$default"
+    ((number += 1))
+if [ "$number" -eq 9 ]
+    then
+        echo "$special"
+        continue
+        fi
+done
