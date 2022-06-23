@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+#This script print 10 times "Best school" position 9 "Hi"
+display_bad="bad luck"
+display_good="good luck"
+default="Best School"
+number=0
+Limit=10
+while [ "$number" -lt "$Limit" ]
+do
+    ((number += 1))
+if [ "$number" -eq 4 ]
+then
+    echo "$display_bad"
+elif [ "$number" -eq 8 ]
+then
+    echo "$display_good"
+else
+    echo "$default"
+fi
+done
