@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#print 10 times "Best school" until loop
+display='Best School'
+number=0
+Limit=10
+until [ "$number" = "$Limit" ]
+do
+    echo "$display"
+    ((number += 1))
+done
