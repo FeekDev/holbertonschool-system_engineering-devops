@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#This script print 10 times "Best school"
+var='Best School'
+Limit=10
+for ((i = 1; i <= Limit; i++))
+do
+    echo "$var"
+done
