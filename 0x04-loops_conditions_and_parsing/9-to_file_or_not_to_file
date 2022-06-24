@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 #This script print 10 times "Best school" position 9 "Hi"
 file="./school"
-if [ -f "$file" ]
+
+if [ -e "$file" ]
 then
     echo "school file exists"
 
@@ -16,6 +17,7 @@ then
     then
         echo "school is a regular file"
     fi
+
 else
     echo "school file does not exist"
 fi
