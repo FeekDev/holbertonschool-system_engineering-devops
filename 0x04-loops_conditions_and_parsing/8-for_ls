@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#This script print 10 times "Best school"
+current_directory=$("ls")
+
+for i in $current_directory
+do
+    echo "$i" | cut -d'-' -f2
+done
