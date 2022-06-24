@@ -12,11 +12,6 @@ do
     do
     echo "$j"
     ((j += 1))
-    if [ "$j" -eq "$minutes" ]
-        then
-            ((i += 1))
-            echo "$j"
-        continue
-        fi
-done
+    done
+    ((i += 1))
 done
