@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 #Create an SSH key pair
-HostName 18.234.175.14
+HostName 3.89.100.88
 IdentityFile ~/.ssh/school
 PasswordAuthentication no
