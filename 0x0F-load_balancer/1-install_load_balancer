@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # Install and configure HAproxy with roundrobin algorithm
+
 sudo apt -y update
 sudo apt -y install haproxy=2.0.\*
 sudo chmod 777 /etc/haproxy/
