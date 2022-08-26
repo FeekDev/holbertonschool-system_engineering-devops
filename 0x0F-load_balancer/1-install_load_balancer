@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Install and configure HAproxy with roundrobin algorithm
+sudo apt -y update
+sudo apt -y install haproxy=2.0.\*
+sudo chmod 777 /etc/haproxy/
+sudo chmod 777 /etc/haproxy/haproxy.cfg
+echo "frontend myfronted
+        bind *:80
+        mode http
+        default_backend myservers
+    backend myservers
+        balance roundrobin
+        server 4758-web-01 3.89.100.88 check port 80
+        server 4758-web-02 54.87.136.71 check port 80" >> /etc/haproxy/haproxy.cfg
+sudo service haproxy restart
