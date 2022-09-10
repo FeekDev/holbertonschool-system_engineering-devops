@@ -25,5 +25,5 @@ if __name__ == '__main__':
                             "completed": task.get('completed'),
                             "username": username
                             })
-    with open('todo_all_employees.json.json', 'w') as f:
+    with open('todo_all_employees.json', 'w') as f:
         dump(data, f)
