@@ -1,17 +1,17 @@
 #!/usr/bin/python3
-""""""
-from distutils.errors import CompileError
-from urllib import request
+"""
+This script display the tasks completed
+"""
 from sys import argv
 from requests import get
 
 if __name__ == '__main__':
-    api_url_usr = f'https://jsonplaceholder.typicode.com/users/{argv[1]}'
-    response = get(api_url_usr)
+    url = 'https://jsonplaceholder.typicode.com/users/{}'.format(argv[1])
+    response = get(url)
     name = response.json().get('name')
 
-    api_todos = f'https://jsonplaceholder.typicode.com/users/{argv[1]}/todos'
-    response = get(api_todos)
+    url = 'https://jsonplaceholder.typicode.com/users/{}/todos'.format(argv[1])
+    response = get(url)
     tasks = response.json()
     done_tasks = []
     for task in tasks:
@@ -23,4 +23,4 @@ if __name__ == '__main__':
           .format(name, len(done_tasks), len(tasks)))
 
     for complete_task in done_tasks:
-        print(f'\t {complete_task}')
+        print("\t {}". format(complete_task))
